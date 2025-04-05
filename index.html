@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unsplash API Photo Gallery</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Unsplash Photo Gallery</h1>
+        <p id="student-info"></p>
+    </header>
+    
+    <main>
+        <section class="search-container">
+            <h2>Search for Photos</h2>
+            <div class="input-group">
+                <input type="text" id="search-input" placeholder="Search for photos...">
+                <button id="search-btn">Search</button>
+            </div>
+        </section>
+        
+        <section class="gallery-controls">
+            <select id="sort-select">
+                <option value="relevant">Relevance</option>
+                <option value="latest">Latest</option>
+            </select>
+            
+            <div class="per-page">
+                <label for="per-page-select">Photos per page:</label>
+                <select id="per-page-select">
+                    <option value="10">10</option>
+                    <option value="20" selected>20</option>
+                    <option value="30">30</option>
+                </select>
+            </div>
+        </section>
+        
+        <section class="gallery-container">
+            <div id="photos-grid">
+                <!-- Photos will be displayed here -->
+            </div>
+            <div id="loading" class="hidden">
+                <div class="loader"></div>
+            </div>
+        </section>
+        
+        <section class="pagination">
+            <button id="prev-btn" class="hidden">Previous</button>
+            <span id="page-info">Page 1</span>
+            <button id="next-btn" class="hidden">Next</button>
+        </section>
+        
+        <!-- Photo Modal -->
+        <div id="photo-modal" class="modal hidden">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <div id="modal-photo-container">
+                    <!-- Selected photo details will be displayed here -->
+                </div>
+            </div>
+        </div>
+        
+        <section class="references">
+            <h3>API Documentation Reference</h3>
+            <p>This project was created by following the <a href="https://unsplash.com/documentation" target="_blank">Unsplash API documentation</a>.</p>
+        </section>
+    </main>
+    
+    <footer>
+        <p>COMP1073 - Assignment 4: API Integration</p>
+    </footer>
+</body>
+</html>
